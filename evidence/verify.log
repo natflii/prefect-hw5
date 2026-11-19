@@ -1,0 +1,32 @@
+=== 1. Приложение Spark в YARN ===
+application_1791554282332_0023	     hw5-prefect-etl	               SPARK	      team	root.default	          FINISHED	         SUCCEEDED	           100%	                                N/A
+=== 2. Данные таблиц в HDFS ===
+Found 2 items
+drwxr-xr-x   - team supergroup          0 2026-11-18 23:29 /user/team/spark-hw5/warehouse/hw5.db/daily_stats
+drwxr-xr-x   - team supergroup          0 2026-11-18 23:29 /user/team/spark-hw5/warehouse/hw5.db/events_clean
+=== 3. Чтение таблиц через Beeline (Hive) ===
++---------------+
+|   tab_name    |
++---------------+
+| daily_stats   |
+| events_clean  |
++---------------+
++--------------------+
+| rows_events_clean  |
++--------------------+
+| 7282               |
++--------------------+
++-------------------+
+| rows_daily_stats  |
++-------------------+
+| 150               |
++-------------------+
++-------------+--------+------------+
+| event_date  | rows_  |   total    |
++-------------+--------+------------+
+| 2026-10-20  | 1452   | 840854.61  |
+| 2026-10-21  | 1464   | 983596.56  |
+| 2026-10-22  | 1458   | 845427.51  |
+| 2026-10-23  | 1454   | 914012.84  |
+| 2026-10-24  | 1454   | 897196.99  |
++-------------+--------+------------+

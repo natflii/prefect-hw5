@@ -1,0 +1,20 @@
+23:28:14.129 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8839
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+23:28:18.945 | INFO    | Flow run 'heavenly-bullmastiff' - Beginning flow run 'heavenly-bullmastiff' for flow 'hw5-spark-yarn-etl'
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/11/18 23:28:24 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23:28:41.434 | INFO    | Task run '1-start-spark-on-yarn-271' - Spark 3.5.3, master=yarn, applicationId=application_1791554282332_0023
+23:28:41.440 | INFO    | Task run '1-start-spark-on-yarn-271' - Finished in state Completed()
+23:28:41.495 | INFO    | Task run '2-connect-hdfs-dfb' - HDFS подключён (hdfs://10.22.0.11:9000). В /user/team/spark-hw4/input файлов: 5 -> ['events_2026-10-20.csv', 'events_2026-10-21.csv', 'events_2026-10-22.csv', 'events_2026-10-23.csv', 'events_2026-10-24.csv']
+23:28:41.500 | INFO    | Task run '2-connect-hdfs-dfb' - Finished in state Completed()
+[Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                          (0 + 2) / 2][Stage 1:=============================>                             (1 + 1) / 2]                                                                                23:28:56.203 | INFO    | Task run '3-read-data-383' - Прочитано строк из HDFS: 7580
+23:28:56.207 | INFO    | Task run '3-read-data-383' - Finished in state Completed()
+[Stage 4:>                                                          (0 + 2) / 2]                                                                                [Stage 10:>                                                         (0 + 2) / 2][Stage 10:=============================>                            (1 + 1) / 2][Stage 12:>                                                         (0 + 1) / 1]                                                                                23:29:03.306 | INFO    | Task run '4-transform-bd7' - После очистки строк: 7282, строк агрегата: 150
+23:29:03.331 | INFO    | Task run '4-transform-bd7' - Finished in state Completed()
+[Stage 20:=============================>                            (1 + 1) / 2][Stage 22:>                                                         (0 + 1) / 1]                                                                                26/11/18 23:29:09 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+[Stage 25:>                                                         (0 + 1) / 1][Stage 32:>                                                         (0 + 1) / 1]                                                                                23:29:18.755 | INFO    | Task run '5-save-tables-a75' - Таблица hw5.events_clean сохранена, строк: 7282
+23:29:19.782 | INFO    | Task run '5-save-tables-a75' - Таблица hw5.daily_stats сохранена, строк: 150
+23:29:19.794 | INFO    | Task run '5-save-tables-a75' - Finished in state Completed()
+23:29:20.407 | INFO    | Flow run 'heavenly-bullmastiff' - Finished in state Completed()
+23:29:20.417 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8839
