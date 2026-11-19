@@ -73,7 +73,7 @@ chmod +x deploy.sh scripts/*.sh
 ## 6. Проверка
 
 ```
-./scripts/verify.sh
+./scripts/verify.sh 2>&1 | grep -v SLF4J | tee evidence/verify.log
 ```
 
 Скрипт:
