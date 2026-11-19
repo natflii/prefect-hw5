@@ -1,4 +1,4 @@
-# Домашнее задание №5 — поток Prefect: Spark на YARN, HDFS, сохранение таблиц
+# Домашнее задание №5 - поток Prefect: Spark на YARN, HDFS, сохранение таблиц
 
 Поток Prefect запускает Apache Spark под управлением YARN, подключается к HDFS, читает данные, выполняет трансформации и сохраняет результат как таблицы Hive. Работает поверх кластера из [ДЗ №1 (HDFS)](https://github.com/g1rone/hadoop-hw1), [ДЗ №2 (YARN)](https://github.com/g1rone/yarn-hw2), [ДЗ №3 (Hive)](https://github.com/iosmoke1/hive-hw3) и [ДЗ №4 (Spark)](https://github.com/AndreyTryak/spark-hw4). Входные данные (CSV) загружены в HDFS в ДЗ4.
 
