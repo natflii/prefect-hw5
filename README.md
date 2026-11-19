@@ -51,7 +51,7 @@ chmod +x deploy.sh scripts/*.sh
 ## 4. Запуск
 
 ```
-./scripts/run.sh
+./scripts/verify.sh 2>&1 | grep -v SLF4J | tee evidence/verify.log
 ```
 
 Скрипт запускает поток и сохраняет лог в `evidence/run_<дата>_<время>.log`. Поток можно запускать повторно: таблицы перезаписываются (`overwrite`), дубликатов не возникает.
